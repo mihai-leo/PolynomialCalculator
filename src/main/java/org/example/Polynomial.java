@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
@@ -16,17 +17,15 @@ public class Polynomial {
     {
         this.elements = new TreeMap<>();
     }
-    public boolean isGood(String string)
+    public Polynomial(int e,float c)
     {
-        if (string.charAt(0)!='-')
-        {
-            string="+"+string;
-        };
-        String regex="^(([-+]{1}\\s*[0-9]*\\.?[0-9]*)(x?)(\\^([0-9]+))\\s*)+$";
-        return Pattern.matches(regex,string.replaceAll("\\s",""));
+        this.elements= new TreeMap<>();
+        addElements(e,c);
     }
+
     public Polynomial(String string)
     {
+        try {
         this.elements = new TreeMap<>();
         if (string.charAt(0)!='-')
         {
@@ -66,10 +65,30 @@ public class Polynomial {
             addElements(expo,coef);
 
         }
+        } catch (Exception e)
+        {
+            System.out.println("error1");
+        }
 
 
     }
-
+    public boolean isGood(String string)
+    {
+        if (string.charAt(0)!='-')
+        {
+            string="+"+string;
+        };
+        String regex="^(([-+]{1}\\s*[0-9]*\\.?[0-9]*)(x?)(\\^([0-9]+))\\s*)+$";
+        return Pattern.matches(regex,string.replaceAll("\\s",""));
+    }
+    public int getBiggestExponent()
+    {
+       return elements.keySet().stream().max(Comparator.comparing(Integer::intValue)).get();
+    }
+    public float getCoefficientOfBiggestExponent()
+    {
+        return elements.get(elements.keySet().stream().max(Comparator.comparing(Integer::intValue)).get());
+    }
     public int addElements(int expo, float coef){
         if(elements.containsKey(expo))
         {
