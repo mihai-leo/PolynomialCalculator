@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Polynomial {
-    private Map<Integer,Float> elements ;
+    private TreeMap<Integer,Float> elements ;
 
 
     public Map<Integer, Float> getElements() {
@@ -31,6 +31,7 @@ public class Polynomial {
         {
             string="+"+string;
         };
+        string=string.replaceAll(" ","");
         String pattern="([-+]{1}[0-9]*\\.?[0-9]*)(x?)(\\^([0-9]+))?";
         Pattern pattern1=Pattern.compile(pattern);
         Matcher matcher=pattern1.matcher(string);
@@ -72,15 +73,7 @@ public class Polynomial {
 
 
     }
-    public boolean isGood(String string)
-    {
-        if (string.charAt(0)!='-')
-        {
-            string="+"+string;
-        };
-        String regex="^(([-+]{1}\\s*[0-9]*\\.?[0-9]*)(x?)(\\^([0-9]+))\\s*)+$";
-        return Pattern.matches(regex,string.replaceAll("\\s",""));
-    }
+
     public int getBiggestExponent()
     {
        return elements.keySet().stream().max(Comparator.comparing(Integer::intValue)).get();
@@ -90,6 +83,10 @@ public class Polynomial {
         return elements.get(elements.keySet().stream().max(Comparator.comparing(Integer::intValue)).get());
     }
     public int addElements(int expo, float coef){
+        if(!elements.containsKey(expo)&&coef==0)
+        {
+            return 4;
+        }
         if(elements.containsKey(expo))
         {
 
@@ -109,38 +106,38 @@ public class Polynomial {
             return 0;
         }
     }
+
+
     public String stringPolynomial()
     {
         StringBuilder strP= new StringBuilder();
         boolean isFirst = true;
-        for(Map.Entry<Integer,Float> i:elements.entrySet())
+        if(elements.isEmpty()||(elements.size()==1&&elements.containsKey(0)&&elements.get(0)==0))
+            return "0";
+        for(Map.Entry<Integer,Float> i:elements.descendingMap().entrySet())
         {
             float coef=i.getValue();
             int exp=i.getKey();
-            if (coef!=0)
-            {
+            if (coef!=0) {
                 if (coef < 0) {
                     strP.append("-");
                 } else if (!isFirst) {
                     strP.append("+");
                 }
                 isFirst = false;
-
-
-                if ((coef != 1.0 && coef != -1.0 )||  exp == 0) {
+                if ((coef != 1.0 && coef != -1.0 )||  exp == 0)
                     strP.append(Math.abs(coef));
-                }
-
-                if (exp != 0) {
+                if (exp != 0)
                     strP.append("x");
-                }
                 if (exp > 1) {
                     strP.append("^");
                     strP.append(exp);
                 }
             }
         }
-        return strP.toString();
-
+        if (strP.toString().isEmpty())
+            return "0";
+        else
+            return strP.toString();
     }
 }

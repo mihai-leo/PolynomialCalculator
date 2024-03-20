@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18759a1f-470f-4d78-a427-d26f2a2b29a5" name="Changes" comment="assignment 1, Leo Mihai">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestingClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OneInput.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Polynomial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Polynomial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TwoInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TwoInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TwoInputs.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +49,10 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/leomi/Documents/AC/2.2/PA/PT2024_30424_Leo_MihaiIoan_Assignment_1/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -54,6 +60,22 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestingClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PT2024_30424_Leo_MihaiIoan_Assignment_1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestingClass" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestingClass" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,6 +90,11 @@
       <workItem from="1710779254873" duration="11176000" />
       <workItem from="1710795721526" duration="393000" />
       <workItem from="1710843400468" duration="49000" />
+      <workItem from="1710850183087" duration="1092000" />
+      <workItem from="1710874512005" duration="279000" />
+      <workItem from="1710936357084" duration="8597000" />
+      <workItem from="1710946359331" duration="412000" />
+      <workItem from="1710947393583" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="assignment 1, Leo Mihai">
       <option name="closed" value="true" />
@@ -77,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710487585556</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="assignment 1, Leo Mihai">
+      <option name="closed" value="true" />
+      <created>1710850330383</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710850330383</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,15 +122,8 @@
     <MESSAGE value="assignment 1, Leo Mihai" />
     <option name="LAST_COMMIT_MESSAGE" value="assignment 1, Leo Mihai" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
