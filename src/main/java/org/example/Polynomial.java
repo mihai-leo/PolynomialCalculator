@@ -107,7 +107,6 @@ public class Polynomial {
         }
     }
 
-
     public String stringPolynomial()
     {
         StringBuilder strP= new StringBuilder();

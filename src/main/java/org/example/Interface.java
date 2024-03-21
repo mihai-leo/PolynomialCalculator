@@ -22,13 +22,13 @@ public class Interface {
     private JLabel label1 = new JLabel("...");
     private JLabel label2 = new JLabel("...");
     private JLabel labels = new JLabel("..");
-    private TextField field = new TextField();
+
 
     public Interface() {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Calculator");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            setSizes(frame);
+            setSizes(frame);//will set the sizes for buttons and labels
             frame.add(myButton);
             frame.add(textField);
             frame.add(addButton);
